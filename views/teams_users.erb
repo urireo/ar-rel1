@@ -1,0 +1,12 @@
+<%if !@team.nil?%>
+   <%= "Team ID: #{@team.id}  Team #{@team.name} has a lot of fans!!!   Notes about team: #{@team.notes}"%>
+   <BR><BR>
+       <H4>  Users for this team are:</H2><br>
+<% end %>
+<%if !@team.users.nil? %>
+      <% @team.users.each do |u|%>
+      <%=   "User name: #{u.name}  |   User email: #{u.email} <BR>" %>
+      <% end%>
+    <%else%>
+   <%= "No users for #{@team.name} team" %>
+   <% end%>

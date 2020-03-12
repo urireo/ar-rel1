@@ -1,0 +1,15 @@
+<form action="/display_team" method="post">
+  Name:   <input type="text" name="namet">
+  <input type="submit" value="Search team">
+</form>
+<ul>
+ 
+ 
+ <% 
+  if !@teams_array.nil? 
+    @teams_array.each do |team_record| %>
+    <li><%= team_record.id.to_s + "    | Name of team: " +  team_record.name %></li>
+  <%end %>
+ <%end %>
+</ul> 
+
